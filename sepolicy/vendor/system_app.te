@@ -1,3 +1,6 @@
+# Battery Health
+r_dir_file(system_app, sysfs_battery_supply);
+
 # Fastcharge
 allow system_app sysfs_fcharge:file { open read getattr write };
 
