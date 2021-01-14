@@ -9,6 +9,7 @@ allow init adsprpcd_file:file mounton;
 
 set_prop(vendor_init, vendor_freq_prop)
 set_prop(vendor_init, vendor_camera_prop)
+set_prop(vendor_init, camera_prop)
 
 # Dirac
 allow vendor_init dirac_prop:property_service set;
