@@ -73,30 +73,40 @@ void load_device_properties() {
         if (region == "Global_TWO") {
             set_device_props(
                     "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys",
-                    "curtana_global-user 10 QKQ1.191215.002 V12.0.1.0.QJWMIXM release-keys",
+                    "redfin-user 11 RQ1A.210105.003 7005429 release-keys",
                     "Redmi", "curtana", "Redmi Note 9S");
         } else if (region == "India") {
             set_device_props(
                     "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys",
-                    "curtana_in-user 10 QKQ1.191215.002 V12.0.1.0.QJWINXM release-keys",
+                    "redfin-user 11 RQ1A.210105.003 7005429 release-keys",
                     "Redmi", "curtana", "Redmi Note 9 Pro");
+        } else if (region == "Japan") {
+            set_device_props(
+                    "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys",
+                    "redfin-user 11 RQ1A.210105.003 7005429 release-keys",
+                    "Redmi", "curtana", "Redmi Note 9S");
         }
     } else if (hwname == "excalibur") {
         set_device_props(
                 "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys",
-                "excalibur_in-user 10 QKQ1.191215.002 V12.0.1.0.QJXINXM release-keys",
+                "redfin-user 11 RQ1A.210105.003 7005429 release-keys",
                 "Redmi", "excalibur", "Redmi Note 9 Pro Max");
     } else if (hwname == "gram") {
         set_device_props(
                 "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys",
-                "gram_in-user 10 QKQ1.191215.002 V12.0.1.0.QJPINXM release-keys",
+                "redfin-user 11 RQ1A.210105.003 7005429 release-keys",
                 "POCO", "gram", "POCO M2 Pro");
     } else if (hwname == "joyeuse") {
         set_device_props(
                 "google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys",
-                "joyeuse_global-user 10 QKQ1.191215.002 V12.0.1.0.QJZMIXM release-keys",
+                "redfin-user 11 RQ1A.210105.003 7005429 release-keys",
                 "Redmi", "joyeuse", "Redmi Note 9 Pro");
     }
+}
+
+void vendor_load_properties() {
+    load_common_properties();
+    load_device_properties();
 }
 
 void property_override(char const prop[], char const value[], bool add)
@@ -147,10 +157,6 @@ void load_dalvik_properties() {
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
-}
-
-void vendor_load_properties() {
-    load_common_properties();
 }
 
 void load_common_properties() {
