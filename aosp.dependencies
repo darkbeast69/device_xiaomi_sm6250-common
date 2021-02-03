@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "lineage-18.1",
+    "remote": "github"
+  },
+  {
+    "remote": "github",
+    "repository": "SonalSingh18/vendor_xiaomi_miuicamera",
+    "target_path": "vendor/xiaomi/miuicamera",
+    "branch": "master"
+  }
+]
