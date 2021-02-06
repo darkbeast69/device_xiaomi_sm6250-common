@@ -23,3 +23,6 @@ allow system_app vendor_sysfs_msm_perf:dir { search };
 
 # USB Fastcharge
 allow system_app sysfs_usbcharge:file { open read getattr write };
+
+allow system_app vendor_default_prop:file { getattr open read };
+allow system_app vendor_default_prop:file {map};
