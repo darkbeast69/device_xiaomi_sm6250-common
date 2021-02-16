@@ -1,3 +1,6 @@
+# Fastcharge
+allow system_app sysfs_fcharge:file { open read getattr write };
+
 # FPS Info
 allow system_app sysfs_fps:file rw_file_perms;
 
